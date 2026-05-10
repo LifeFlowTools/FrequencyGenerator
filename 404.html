@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Page not found — FrequencyGenerator." />
+  <title>404 Not Found — FrequencyGenerator</title>
+  <link rel="icon" href="icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .error-code {
+      font-size: clamp(5rem, 15vw, 7rem);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      color: var(--olive);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: var(--space-sm);
+      text-shadow: 0 4px 24px oklch(75% 0.14 125 / 0.15);
+    }
+
+    .error-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: var(--space-xs);
+    }
+
+    .error-desc {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      max-width: 280px;
+      line-height: 1.5;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 3.5rem;
+      padding: 0 1.5rem;
+      border-radius: 99px;
+      background: var(--bg-raised);
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: background 180ms var(--ease-out), color 180ms var(--ease-out), transform 120ms var(--ease-out), box-shadow 180ms var(--ease-out);
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-home:hover {
+      background: var(--border);
+      color: var(--text-primary);
+      box-shadow: 0 4px 12px oklch(0% 0 0 / 0.2);
+    }
+
+    .btn-home:active {
+      transform: scale(0.96);
+    }
+
+    .btn-home:focus-visible {
+      outline: 2px solid var(--olive);
+      outline-offset: 2px;
+    }
+
+    .btn-home svg {
+      margin-right: 10px;
+      color: var(--olive);
+      transition: transform 180ms var(--ease-out);
+    }
+
+    .btn-home:hover svg {
+      transform: translateX(-4px);
+    }
+    
+    /* Animation for the 404 text */
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 1; text-shadow: 0 4px 24px oklch(75% 0.14 125 / 0.15); }
+      50% { opacity: 0.8; text-shadow: 0 4px 32px oklch(75% 0.14 125 / 0.3); }
+    }
+    
+    .error-code {
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app" id="app">
+
+    <header class="header" role="banner">
+      <h1 class="logo" aria-label="FrequencyGenerator">
+        <span class="logo-freq">Frequency</span><span class="logo-gen">Generator</span>
+      </h1>
+    </header>
+
+    <main class="main-content">
+      <section class="visualizer-section">
+        <div class="error-container">
+          <div class="error-code">404</div>
+          <h2 class="error-title">Out of Range</h2>
+          <p class="error-desc">The frequency or page you are looking for cannot be found.</p>
+          <a href="index.html" class="btn-home">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Return to Generator
+          </a>
+        </div>
+      </section>
+    </main>
+
+  </div>
+</body>
+
+</html>
